@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="canvas">
+                <a href="">link</a>
+                <!-- Инфо внутри санвас -->
+                <div class="canvas-info">
+                    <div class="canvas-numbers">
+                        <span class="canvas-number">72.</span>
+                        <div class="canvas-numbers-wrap">
+                            <span class="canvas-number-percent">%</span>
+                            <span class="canvas-number-fraction">7</span>
+                        </div>
+                    </div>
+                    <h1 class="canvas-title">Лояльность <br> <span>ниже среднего</span></h1>
+                    <span class="canvas-description">по отрасли: FMCG <br> значение слева от медианы <br> 52,0% -
+                        83,1%</span>
+                    <div class="canvas-growth">
+                        <svg class="triangle" width="20" height="20" viewBox="0 0 25 25">
+                            <polygon points="5,15 15,5 25,15" fill="#289961" />
+                        </svg>
+                        <span class="canvas-growth-number">3.1</span>
+                    </div>
+                </div>
+                <!-- Диаграмма -->
+                <svg class="chart" width="500" height="500" viewBox="0 0 50 50">
+                    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                </svg>
+                <!-- Линия -->
+                <svg class="line" width="30" height="300">
+                    <polyline points="5,260 5,20 30,20 " stroke="#cecdcd" stroke-width="2"  stroke-linejoin="round"  fill="none" />
+                </svg>
+                <svg class="line-two" width="40" height="40">
+                    <line x1="10" y1="15" x2="30" y2="15" stroke="#cecdcd" stroke-width="2" />
+                </svg>
+                <svg class="line-three" width="30" height="40">
+                    <polyline points="5,5 5,30 20,30 " stroke="#cecdcd" stroke-width="2"  stroke-linejoin="round"  fill="none" />
+                </svg>
+                <!-- Плюс -->
+                <svg class="plus" width="40" height="40">
+                    <line x1="10" y1="15" x2="30" y2="15" stroke="#cecdcd" stroke-width="2" />
+                    <line x1="20" y1="5" x2="20" y2="25" stroke="#cecdcd" stroke-width="2" />
+                </svg>
+                <div class="legend">
+                    <ul class="caption-list">
+                        <li class="caption-item">
+                            <h2 class="caption-title">Промоутеры</h2>
+                            <div class="caption-wrapper">
+                                <span class="caption-percent">32.2%</span>
+                                <span class="caption-count">81</span>
+                            </div>
+                            <div class="caption-container">
+                                <span class="caption-growth-one caption-growth">+1.2%</span>
+                            </div>
+                        </li>
+                        <li class="caption-item">
+                            <h2 class="caption-title">Скептики</h2>
+                            <div class="caption-wrapper">
+                                <span class="caption-percent">39.1%</span>
+                                <span class="caption-count">8</span>
+                            </div>
+                            <div class="caption-container">
+                                <span class="caption-growth-two caption-growth">+4.8%</span>
+                            </div>
+                        </li>
+                        <li class="caption-item">
+                            <h2 class="caption-title">Критики</h2>
+                            <div class="caption-wrapper">
+                                <span class="caption-percent">79.8%</span>
+                                <span class="caption-count">7</span>
+                            </div>
+                            <div class="caption-container">
+                                <span class="caption-growth-three caption-growth">-9.7%</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+@font-face {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Arial.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/GothamPro.woff2') format('woff2');
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham Pro', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #565C66;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.container {
+    width: 1366px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 150px;
+    min-height: 100vh;
+}
+
+.canvas {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas::before {
+    position: absolute;
+    content: "";
+    top: 57px;
+
+    width: 45px;
+    height: 60px;
+
+    background-image: url('../images/loyalty.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Инфо внутри канвас */
+
+.canvas-info {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 22%;
+    left: 29%;
+
+    text-align: center;
+}
+
+.canvas-number {
+    position: relative;
+
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: 40px;
+}
+
+.canvas-numbers-wrap {
+    position: absolute;
+    top: -13px;
+    left: 128px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.canvas-number-percent {
+    color: #cecdcd;
+}
+
+.canvas-title {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+}
+
+.canvas-title span {
+    display: block;
+
+    padding-top: 20px;
+
+    color: #f7e544;
+    font-size: 25px;
+}
+
+.canvas-description {
+    font-size: 14px;
+    color: #cecdcd;
+}
+
+.canvas-growth {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.canvas-growth-number {
+    padding-left: 15px;
+
+    font-size: 25px;
+    color: #289961;
+}
+
+/* Диаграмма */
+
+.unit {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+
+    animation-name: render;
+    animation-duration: 1.5s;
+
+    transition-property: all;
+    transition-duration: 1.5s;
+}
+
+.unit:nth-child(1) {
+    stroke: #f3e880;
+    stroke-dasharray: 33 69;
+    stroke-dashoffset: -82;
+
+}
+
+.unit:nth-child(2) {
+    stroke: #289961;
+    stroke-dasharray: 25 100;
+    stroke-dashoffset: -13;
+}
+
+.unit:nth-child(3) {
+    stroke: #cecdcd;
+    stroke-dasharray: 31 100;
+    stroke-dashoffset: -38;
+
+}
+
+.unit:nth-child(4) {
+    stroke: transparent;
+    stroke-dasharray: 13 100;
+    stroke-dashoffset: -69;
+}
+
+/* Анимация диаграммы */
+
+@keyframes render {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+/* Линия */
+
+.line {
+    position: absolute;
+    top: 276px;
+    left: 30px;
+}
+
+.line-two{
+    position: absolute;
+    top: 500px;
+    left: 24px;
+}
+
+.line-three{
+    position: absolute;
+    top: 565px;
+    left: 29px;
+}
+
+/* Плюс */
+
+.plus {
+    position: absolute;
+    top: 538px;
+    left: 14px;
+}
+
+/* Описание диаграммы */
+
+.caption-list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.caption-item {
+    display: grid;
+    grid-template-columns: 135px 1fr 1fr;
+    column-gap: 20px;
+    align-items: start;
+
+    margin-bottom: 35px;
+}
+
+.caption-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.caption-title {
+    margin: 0;
+}
+
+.caption-count {
+    position: relative;
+
+    padding-right: 25px;
+}
+
+.caption-count::after {
+    position: absolute;
+
+    content: "";
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+
+    background-image: url('../images/human_full.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caption-container {
+    padding: 10px;
+
+    background-color: #ececec;
+    border: 1px solid #cecdcd;
+    border-radius: 5px;
+}
+
+.caption-percent {
+    font-weight: 700;
+}
+
+.caption-count {
+    color: #cecdcd;
+}
+
+.caption-growth {
+    position: relative;
+
+    padding-left: 35px;
+}
+
+.caption-growth::before {
+    position: absolute;
+
+    content: "";
+    top: -13px;
+    left: -11px;
+
+    height: 35px;
+
+    border-radius: 5px 0 0 0;
+}
+
+.caption-growth::after {
+    position: absolute;
+
+    content: "";
+    bottom: -14px;
+    left: -11px;
+
+    height: 10px;
+
+    border-radius: 0 0 0 5px;
+}
+
+.caption-growth-one::before {
+    width: 35px;
+    background-color: #3f8663;
+}
+
+.caption-growth-one::after {
+    width: 31px;
+    background-color: #3f8662a9;
+}
+
+.caption-growth-two::before {
+    width: 40px;
+    background-color: #f7e544;
+}
+
+.caption-growth-two::after {
+    width: 35px;
+    background-color: #f7e544a9;
+}
+
+.caption-growth-three::before {
+    width: 30px;
+    background-color: #d64329;
+}
+
+.caption-growth-three::after {
+    width: 35px;
+    background-color: #d64329a4;
+}
